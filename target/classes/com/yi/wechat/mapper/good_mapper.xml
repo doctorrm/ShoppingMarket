@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yi.wechat.dao.GoodOperationImpl">
+ <select id="getGoodById" parameterType="int" 
+        resultType="com.yi.wechat.pojo.Good">
+select * from good where good_id=#{good_id};<!-- 前后相同，并且都是数据库的列名 -->
+ </select>
+ <select id="getAllGood" 
+ 			resultType="com.yi.wechat.pojo.Good">
+ 		select * from good;
+ </select>
+<insert id="insertGood" parameterType="com.yi.wechat.pojo.Good">
+ 		insert into good(good_id,good_name,good_description,good_price,good_main_pic_path,good_desc_pics_path)
+ 			values (#{good_id},#{good_name},#{good_description},#{good_price},#{good_main_pic_path},#{good_desc_pics_path})
+ </insert>
+ <delete id="deleteGood" parameterType="int">
+ 		delete from good where good_id=#{good_id}
+ </delete>
+ <update id="updateGood" parameterType="com.yi.wechat.pojo.Good">
+ 		update good set good_name=#{good_name},good_description=#{good_description},good_price=#{good_price},
+ 		good_main_pic_path=#{good_main_pic_path},good_desc_pics_path=#{good_desc_pics_path} where good_id=#{good_id};
+ </update>
+</mapper>

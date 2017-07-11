@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>商品详情页面</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script src="js/good_detail.js"></script>
+
+<link rel="stylesheet"  href="css/good_detail.css" />
+
+<style>
+*{margin:0px; padding:0px;}
+/*body{font-size:12px; line-height:1.5em; color:red; }*/
+/*.bottomDiv{position:fixed; height:24px; line-height:24px; text-align:center; background-color:#efefef; border-top:1px solid #CCC; left:0px; bottom:0px; _position:absolute;}*/
+.bottomDiv{position:fixed; left:0px; bottom:0px;height:40px;border-top:1px solid #CCC; text-align:center; background-color:white;  }
+</style>
+<script>
+	$(document).ready(function(){
+	    var screenWidth = $(window).width();//获取屏幕可视区域的宽度。
+		$(".bottomDiv").width(screenWidth);//将宽度赋值给bottomDiv使其可以贯穿整个屏幕。
+		//var screenHeight = $(window).height();//获取屏幕可视区域的高度。
+		var divHeight = $(".bottomDiv").height() + 1;//bottomDiv的高度再加上它一像素的边框。
+		
+		$(window).scroll(function(){
+			var scrollHeight = $(document).scrollTop();//获取滚动条滚动的高度。
+			if(!window.XMLHttpRequest){
+				$(".bottomDiv").css("top",screenHeight + scrollHeight - divHeight);	
+			}//判断是否为IE6，如果是，执行大括号中内容
+		})
+	})
+</script>
+</head>
+
+<body>
+<!--下面是轮播-->
+<div class="slider">
+		<ul class="slider-main">
+			<!--图片修改就只需要修改路径就好了，id什么的不用修改-->
+			<li class="slider-panel">
+				<a  href="#" target="_blank"><img id="img1"  alt="关注脚本之家" title="关注脚本之家" src="images/img11.jpg"></a>
+			</li>
+			<li class="slider-panel">
+				<a  href="#" target="_blank"><img id="img2"  alt="关注脚本之家" title="关注脚本之家" src="images/img12.jpg"></a>
+			</li>
+			<li class="slider-panel">
+				<a  href="#" target="_blank"><img id="img3" alt="关注脚本之家" title="关注脚本之家" src="images/img13.jpg"></a>
+			</li>
+			<li class="slider-panel">
+				<a  href="#" target="_blank"><img id="img4" alt="关注脚本之家" title="关注脚本之家" src="images/img14.jpg"></a>
+			</li>
+		</ul>
+		<div class="slider-extra">
+			<ul class="slider-nav">
+				<li class="slider-item">1</li>
+				<li class="slider-item">2</li>
+				<li class="slider-item">3</li>
+				<li class="slider-item">4</li>
+			</ul>
+			<div class="slider-page">
+				<a class="slider-pre" href="javascript:;;">&lt;</a>
+				<a class="slider-next" href="javascript:;;">&gt;</a>
+			</div>
+		</div>
+	</div>
+<!--上面是轮播-->
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+测试测试！！！！！
+<br><br /><br /><br />
+<!--下面是永远悬浮在底部的购买和添加到购物车按钮组-->
+  <div class="bottomDiv">
+  	<button id="bottom_btn1" style="background-color: #ff6b00;height:40px;float: right;border:none;padding:10px;width:34%"><a href="#" style="color: white;text-decoration: none;">立即购买</a></button>
+  	<button id="bottom_btn1" style="background-color: #ffbd01;height:40px;float:right;border:none;padding:10px;width:30%"><a href="cart.html" style="color: white;text-decoration: none;">加入购物车</a></button>
+  	<button style="background-color:white;height:40px;width:12%;float:right;border-bottom: none;border-top: none;border-left:none;">客服</button>
+  	<button style="background-color:white;height:40px;width:12%;float:right;border-bottom: none;border-top: none;border-left:none;">店铺</button>
+  	<button style="background-color:white;height:40px;width:12%;float:right;border-bottom: none;border-top: none;border-left:none;">收藏</button>
+  	
+  </div>
+</body>
+
+</html>

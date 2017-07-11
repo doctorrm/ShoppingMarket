@@ -1,0 +1,8 @@
+[ERROR] 2017-06-08 20:37:24,209           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40020 errmsg:invalid button url size hint: [f8xBwA0470vr19]
+[INFO ] 2017-06-08 20:40:29,014           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-08 20:44:07,033           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-08 20:46:26,996           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-08 20:46:54,314           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-08 20:49:45,230           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-08 20:50:37,470           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-08 21:37:28,813           com.yi.wechat.util.MenuUtil     - 创建菜单成功！

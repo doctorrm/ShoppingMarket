@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>商城后台管理</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- 貌似会导致字体缩小 -->
+	<link rel="stylesheet" href="css/end.index.css" />
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/end.index.js"></script>
+	<script type="text/javascript" src="js/load.more.js"></script>
+</head>
+
+<body class="bodyy" onLoad="onLoadFun()" style="background-color:#f1f1f1">
+<!-- 下面是最顶部导航栏 -->
+<nav class="navbar navbar-inverse" style="height:20%;" role="navigation">
+	<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">后台</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="back-end-index.html">商城管理</a></li>
+            <li style=""><a href="#">附近看看</a></li>
+			<li><a href="#">程序数据中心</a></li>
+			<li><a href="index.html">前端首页</a></li>				
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        	<li><a href="login.html">退出登录</a></li>
+        </ul>
+    </div>
+	</div>
+</nav><!-- top nav bar -->
+
+<!-- 侧边导航栏 -->
+<ul class="side-bar-ul"><!-- chrome更喜欢uull? -->
+	<li><a class="active" href="back-end-index.html">商品管理</a></li>
+	<li><a href="#">订单管理</a></li>
+	<li><a href="#">用户管理</a></li>
+	<li>
+		<ul>
+			<li><a href="#">11</a></li>
+			<li>12</li>
+		</ul>
+	
+	</li>
+	<li><a href="#">管理员中心</a></li>		
+</ul><!-- side nav bar -->
+		
+<!-- 右侧表格 -->	       							
+<div class="right-div" id="right_div">
+	<button class="btn-add" style="margin-left:28%;border:none;background-color:#2d6ed8;color:white">
+		       点击添加新商品</button>
+	<div style="float:right;" id="time">页面时钟</div>
+		      						 <br /><br />
+	<table id="tb" align="center" style="width:80%;height:80%">
+		<tr><th style="width:30px;">商品在数据库中的编号</th><th>商品名称</th><th>商品简介</th><th>商品价格</th><th>商品图片</th>
+			<th>修改</th><th>删除</th>
+		</tr>
+		<tr id="trr"></tr><!-- 目前为空，因为会在按钮点击时自动生成数据。 -->
+	</table>
+									 <br /><br />
+	<div class="btns">
+	<button  class="loadMore"
+			style="width:500px;height:60px;background-color:#2d6ed8;color:white">
+	       加载更多</button>	 
+	<br /><br />
+	<a href="#">返回顶部</a>
+	</div>    	  
+</div><!-- The right div -->
+ 
+<!-- 被隐藏的添加界面 -->
+<div class="h-right-div" style="margin-left:50%">
+	<form method="post" action="AddGoodServlet" name="editForm" id="editForm"  onsubmit="return chkfrm()" enctype="multipart/form-data"><!-- 记得一定要加enctye以上传图片！！ -->
+		商品名称：<input name="good_name" id="good_name" type="text" placeHolder="请输入商品名称">&nbsp;&nbsp;<span style="color:red">*</span><br><br>
+		商品描述：<textarea name="good_description" id="good_description" rows="5" cols="20" placeHolder="请输入商品简介"></textarea>&nbsp;&nbsp;<span style="color:red">*</span><br><br>
+		商品价格：<input name="good_price" id="good_price" type="text" placeHolder="请输入商品价格/元">&nbsp;&nbsp;<span style="color:red">*</span><br><br>
+		商品封面图片上传(只能上传一张封面)：		
+		<input type="file" name="good_main_pic"  id="good_main_pic"  accept=".jpg, .jpeg, .png" ><!-- 封面图片 -->
+						<br>
+		商品描述图片上传(支持多张图片,请对每张待上传的图片命名为不同的纯数字以保证顺序。)：
+		<input type="file" name="good_desc_pics" id="good_desc_pics" multiple accept=".jpg, .jpeg, .png"><!--多个描述图片的，暂时没用到 -->
+					<br><br><br><br>
+		<input onclick=refreshFun()  style="width:100px;text-align:center" type="submit" value="确认"/>
+	</form>
+</div><!-- hidden add good form -->
+
+<!-- 页脚 -->
+<div class="footer" style="width:100%">易开发<b>·</b>版权所有<br>
+  					 &copy;&nbsp;2017-2020
+</div><!-- the footer -->
+
+</body>
+</html>
+

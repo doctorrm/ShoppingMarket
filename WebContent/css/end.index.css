@@ -1,0 +1,52 @@
+/*下面是后端首页的css样式*/
+table,th,td{
+	border:1px solid black;
+	text-align:center;	
+}
+td{
+	width:60px;
+	height:60px;
+}
+.footer{
+	/* background-color:pink; */
+	padding-bottom:20px;/* 是针对字体对于div的内部距离的 */
+	padding-top:20px;
+	text-align:center;
+}
+.btns{
+	text-align:center;
+	/* align:center; 这个好像不是居中按钮的*/
+}
+
+.right-div{
+	width:80%;
+	height:100%;/* 这里的100%是真正的100% */
+	margin-left:20%;/* matter,or it wil be messed up with ul */
+} 
+.side-bar-ul{/* 注意不要直接用ul，因为bootstrap框架是有对ul这个标签进行样式处理的。 */
+		background-color:#f1f1f1;
+		height:100%;/* 这里的100%是指视野内高度，向下滚动后就没有了。 */
+		width:20%;
+		position:absolute; /*matter,make ul fill the left 25% page，加上才不会和右边产生关系。 */		
+		padding:0;
+}
+li a{
+	display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a.active {
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+}
+/*上面是后端首页的css样式*/
+/* ================================================= */
+

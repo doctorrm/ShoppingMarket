@@ -1,0 +1,4 @@
+[ERROR] 2017-07-07 16:20:58,266           com.yi.wechat.menu.MenuUtil     - 创建菜单失败 errcode:40055 errmsg:invalid button url domain hint: [TTS3EA0667vr22]
+[INFO ] 2017-07-07 16:21:51,532           com.yi.wechat.menu.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-07-07 16:24:49,215           com.yi.wechat.menu.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-07-07 16:34:18,705           com.yi.wechat.menu.MenuUtil     - 创建菜单成功！

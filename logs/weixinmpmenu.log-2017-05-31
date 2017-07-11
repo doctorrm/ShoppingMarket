@@ -1,0 +1,10 @@
+[INFO ] 2017-05-31 17:34:00,127                      useless.Useless1     - Printed by logger
+[INFO ] 2017-05-31 17:34:37,324                      useless.Useless1     - Printed by logger
+[WARN ] 2017-05-31 17:34:37,326                      useless.Useless1     - Printed by warn
+[ERROR] 2017-05-31 17:34:37,326                      useless.Useless1     - printed by error
+[WARN ] 2017-05-31 17:34:51,467                      useless.Useless1     - Printed by warn
+[ERROR] 2017-05-31 17:34:51,469                      useless.Useless1     - printed by error
+[INFO ] 2017-05-31 17:34:51,469                      useless.Useless1     - Printed by logger
+[WARN ] 2017-05-31 17:35:12,211                      useless.Useless1     - Printed by warn
+[ERROR] 2017-05-31 17:35:12,212                      useless.Useless1     - printed by error
+[INFO ] 2017-05-31 17:35:12,212                      useless.Useless1     - Printed by logger

@@ -1,0 +1,186 @@
+[ERROR] 2017-06-01 11:12:23,181           com.yi.wechat.util.MenuUtil     - 获取access_token失败  errcode:41002 errmsgappid missing hint: [6i5BDA0765e578]
+[ERROR] 2017-06-01 11:14:54,808           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsginvalid button size hint: [g0E7Ia0917vr18]
+[ERROR] 2017-06-01 11:14:54,809     com.yi.wechat.test.CreateMenuTest     - 创建菜单失败!错误码:40016
+[ERROR] 2017-06-01 11:18:46,101           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [TftE0148vr20]
+[ERROR] 2017-06-01 11:18:46,102     com.yi.wechat.test.CreateMenuTest     - 创建菜单失败!错误码:40016
+[ERROR] 2017-06-01 11:21:00,396           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [qDQ_ba0283vr19]
+[ERROR] 2017-06-01 11:21:00,397     com.yi.wechat.test.CreateMenuTest     - 创建菜单失败!错误码:40016
+[ERROR] 2017-06-01 11:21:10,006           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [ikb2pA0292vr22]
+[ERROR] 2017-06-01 11:21:10,007     com.yi.wechat.test.CreateMenuTest     - 创建菜单失败!错误码:40016
+[ERROR] 2017-06-01 11:26:47,532           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [U65C30630vr23]
+[ERROR] 2017-06-01 11:26:47,545     com.yi.wechat.test.CreateMenuTest     - 创建菜单失败!错误码:40016
+[INFO ] 2017-06-01 11:29:17,253           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 11:29:17,784           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [H_J8ka0780vr20]
+[INFO ] 2017-06-01 11:38:22,502           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 11:38:22,784           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [NwNPGA0325vr21]
+[INFO ] 2017-06-01 11:38:50,460           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 11:38:50,748           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [8aHcNA0353vr20]
+[INFO ] 2017-06-01 11:45:02,061           com.yi.wechat.util.MenuUtil     - 获取access_token成功!Token:XpNksM6ugQf8Uw592yruYYyhHqL0weEv_hv0NjNWLVU_Klm9UQagrKZJjgcpAqx1ADBMmDBgzG34vszKMlTGHZsnOvd53GVfsBMSMfPUQ6WP5JbGQJjRnpbH4ERjCLskILMcAEAYBC
+[ERROR] 2017-06-01 11:45:02,371           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [QMrq.A0725vr21]
+[INFO ] 2017-06-01 11:47:20,781           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 11:47:20,841           com.yi.wechat.util.MenuUtil     - {"buttons":[{"name":"生活","sub_button":[{"name":"天气预报","type":"click","key":"11"},{"name":"公交查询","type":"click","key":"12"},{"name":"周边搜索","type":"click","key":"13"},{"name":"历史上的今天","type":"click","key":"14"}]},{"name":"休闲","sub_button":[{"name":"歌曲点播","type":"click","key":"21"},{"name":"经典游戏","type":"click","key":"22"},{"name":"美女电台","type":"click","key":"23"},{"name":"人脸识别","type":"click","key":"24"},{"name":"聊天唠嗑","type":"click","key":"25"}]},{"name":"体验","sub_button":[{"name":"Q友圈","type":"click","key":"31"},{"name":"电影排行榜","type":"click","key":"32"},{"name":"幽默笑话","type":"click","key":"33"}]}]}
+[ERROR] 2017-06-01 11:47:21,144           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [0IVxWa0863vr23]
+[INFO ] 2017-06-01 11:54:05,254           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 11:54:05,299           com.yi.wechat.util.MenuUtil     - {"buttons":[{"name":"生活","sub_button":[{"name":"天气预报","type":"click","key":"11"},{"name":"公交查询","type":"click","key":"12"},{"name":"周边搜索","type":"click","key":"13"},{"name":"历史上的今天","type":"click","key":"14"}]},{"name":"休闲","sub_button":[{"name":"歌曲点播","type":"click","key":"21"},{"name":"经典游戏","type":"click","key":"22"},{"name":"美女电台","type":"click","key":"23"},{"name":"人脸识别","type":"click","key":"24"},{"name":"聊天唠嗑","type":"click","key":"25"}]},{"name":"体验","sub_button":[{"name":"Q友圈","type":"click","key":"31"},{"name":"电影排行榜","type":"click","key":"32"},{"name":"幽默笑话","type":"click","key":"33"}]}]}
+[ERROR] 2017-06-01 11:54:05,554           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [.fG5eA0268vr23]
+[INFO ] 2017-06-01 11:56:04,701           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 11:56:04,746           com.yi.wechat.util.MenuUtil     - {"buttons":[{"name":"生活","sub_button":[{"name":"天气预报","type":"click","key":"11"},{"name":"公交查询","type":"click","key":"12"},{"name":"周边搜索","type":"click","key":"13"},{"name":"历史上的今天","type":"click","key":"14"}]},{"name":"休闲","sub_button":[{"name":"歌曲点播","type":"click","key":"21"},{"name":"经典游戏","type":"click","key":"22"},{"name":"美女电台","type":"click","key":"23"},{"name":"人脸识别","type":"click","key":"24"},{"name":"聊天唠嗑","type":"click","key":"25"}]},{"name":"体验","sub_button":[{"name":"Q友圈","type":"click","key":"31"},{"name":"电影排行榜","type":"click","key":"32"},{"name":"幽默笑话","type":"click","key":"33"}]}]}
+[ERROR] 2017-06-01 11:56:05,016           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [_fjUcA0387vr20]
+[INFO ] 2017-06-01 11:57:32,874           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 11:57:32,916           com.yi.wechat.util.MenuUtil     - {"buttons":[{"name":"生活","sub_button":[{"name":"天气预报","type":"click","key":"11"},{"name":"公交查询","type":"click","key":"12"},{"name":"周边搜索","type":"click","key":"13"},{"name":"历史上的今天","type":"click","key":"14"}]},{"name":"休闲","sub_button":[{"name":"歌曲点播","type":"click","key":"21"},{"name":"经典游戏","type":"click","key":"22"},{"name":"美女电台","type":"click","key":"23"},{"name":"人脸识别","type":"click","key":"24"},{"name":"聊天唠嗑","type":"click","key":"25"}]},{"name":"体验","sub_button":[{"name":"Q友圈","type":"click","key":"31"},{"name":"电影排行榜","type":"click","key":"32"},{"name":"幽默笑话","type":"click","key":"33"}]}]}
+[ERROR] 2017-06-01 11:57:33,156           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [eEG3Ba0475vr23]
+[INFO ] 2017-06-01 12:23:13,221           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 12:23:13,578           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [UNBE40016vr23]
+[INFO ] 2017-06-01 12:29:27,339           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 12:29:27,666           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [uKsINa0390vr22]
+[INFO ] 2017-06-01 12:33:46,783                   useless.MenuManager     - 菜单创建成功！
+[INFO ] 2017-06-01 12:34:09,191                   useless.MenuManager     - 菜单创建成功！
+[INFO ] 2017-06-01 12:34:39,099           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 12:34:39,442           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [jw7gGa0702vr23]
+[INFO ] 2017-06-01 12:37:59,608                   useless.MenuManager     - 菜单创建成功！
+[INFO ] 2017-06-01 12:38:36,402           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 12:38:36,717           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40018 errmsg:invalid button name size hint: [IW9Xla0939vr18]
+[ERROR] 2017-06-01 12:40:51,179           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40018 errmsg:invalid button name size hint: [nH2hza0073vr23]
+[ERROR] 2017-06-01 12:44:54,478           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40018 errmsg:invalid button name size hint: [e2eWea0317vr18]
+[ERROR] 2017-06-01 12:48:32,180           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40018 errmsg:invalid button name size hint: [ICU0aa0534vr22]
+[INFO ] 2017-06-01 12:50:05,400     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 12:51:35,577     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 12:55:27,752     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 12:55:55,427     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 12:56:43,332     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 13:17:57,016     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 13:18:22,122     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 13:19:22,369     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[ERROR] 2017-06-01 13:19:54,343           com.yi.wechat.util.MenuUtil     - 菜单成功！
+[INFO ] 2017-06-01 13:19:54,344     com.yi.wechat.test.CreateMenuTest     - 菜单创建成功！
+[INFO ] 2017-06-01 13:20:37,799           com.yi.wechat.util.MenuUtil     - 菜单成功！
+[INFO ] 2017-06-01 13:21:00,945           com.yi.wechat.util.MenuUtil     - 菜单成功！
+[INFO ] 2017-06-01 13:21:27,557           com.yi.wechat.util.MenuUtil     - 菜单成功！
+[INFO ] 2017-06-01 13:22:44,302                   useless.MenuManager     - 菜单创建成功！
+[INFO ] 2017-06-01 13:23:18,206                   useless.MenuManager     - 菜单创建成功！
+[INFO ] 2017-06-01 13:24:03,913           com.yi.wechat.util.MenuUtil     - 菜单成功！
+[INFO ] 2017-06-01 13:25:18,226           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:25:52,989           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:25:53,647           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:27:03,038           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:27:03,600           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:27:28,659           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:27:29,242           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:29:24,825           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:29:25,167           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40018 errmsg:invalid button name size hint: [QoSD0987vr23]
+[INFO ] 2017-06-01 13:30:00,360           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:30:01,035           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:31:53,023           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:31:53,871           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:33:44,558           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:33:45,279           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:34:34,976           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:34:35,260           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40018 errmsg:invalid button name size hint: [0RoVgA0298vr22]
+[INFO ] 2017-06-01 13:35:15,253           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:35:15,889           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:42:55,102           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:42:55,785           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:44:22,103           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:44:22,879           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:51:43,889           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:51:44,213           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [TOuiTa0327vr20]
+[INFO ] 2017-06-01 13:52:03,250           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:52:03,739           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [D0346vr23]
+[INFO ] 2017-06-01 13:54:01,070           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:54:01,357           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [wOsRsA0464vr19]
+[INFO ] 2017-06-01 13:55:37,320           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:55:37,619           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [FOtDuA0560vr23]
+[INFO ] 2017-06-01 13:56:31,866           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:56:32,686           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [QrGuwa0615vr19]
+[INFO ] 2017-06-01 13:58:07,067           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:58:08,581           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:58:33,296           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 13:58:35,330           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 13:59:13,934           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:59:14,223           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [1FfW_0777vr20]
+[INFO ] 2017-06-01 13:59:56,203           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 13:59:56,512           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [3q4_la0819vr21]
+[INFO ] 2017-06-01 14:00:14,623           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 14:00:15,213           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 14:01:54,008           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 14:01:54,301           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [Fzaria0937vr21]
+[INFO ] 2017-06-01 14:02:18,288           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 14:02:18,852           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 18:39:30,400           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 18:39:31,254           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 18:54:26,366           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 18:54:26,475                net.sf.json.JSONObject     - Property 'button' of class com.yi.wechat.menu.Menu has no read method. SKIPPED
+[ERROR] 2017-06-01 18:54:26,727           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [vP8rtA0489vr22]
+[INFO ] 2017-06-01 19:00:37,981           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:00:38,275           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [D9vE_0861vr19]
+[INFO ] 2017-06-01 19:10:04,252           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:10:04,305                net.sf.json.JSONObject     - Property 'button' of class com.yi.wechat.menu.Menu has no read method. SKIPPED
+[ERROR] 2017-06-01 19:10:04,577           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [.9q8ja0427vr23]
+[INFO ] 2017-06-01 19:14:08,110           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:14:08,471           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [BVLhOA0671vr19]
+[INFO ] 2017-06-01 19:19:11,367           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:19:11,717           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [Bd4saa0974vr19]
+[INFO ] 2017-06-01 19:29:43,447           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:29:44,319           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 19:31:09,428           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:31:10,110           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 19:31:53,719           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:31:54,063           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [6y.w80737vr23]
+[INFO ] 2017-06-01 19:33:47,283           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:33:47,555           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [GekJRa0850vr21]
+[INFO ] 2017-06-01 19:36:02,608           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:36:02,906           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [0986vr23]
+[INFO ] 2017-06-01 19:41:06,103           com.yi.wechat.util.MenuUtil     - execute!
+[INFO ] 2017-06-01 19:41:06,104           com.yi.wechat.util.MenuUtil     - execute2!
+[INFO ] 2017-06-01 19:41:06,105           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[ERROR] 2017-06-01 19:41:06,419           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [IYqqnA0289vr18]
+[INFO ] 2017-06-01 19:42:04,954           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:42:05,246           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 19:42:05,248           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [SK5jva0348vr20]
+[INFO ] 2017-06-01 19:46:21,230           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:46:21,524           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 19:46:21,527           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [57.87a0604vr21]
+[INFO ] 2017-06-01 19:48:42,402           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:48:42,700           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 19:48:42,702           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [3hVEpA0745vr21]
+[INFO ] 2017-06-01 19:49:26,680           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:49:27,300           com.yi.wechat.util.MenuUtil     - execute!
+[INFO ] 2017-06-01 19:49:27,300           com.yi.wechat.util.MenuUtil     - execute2!
+[INFO ] 2017-06-01 19:49:27,300           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 19:53:09,165           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:53:09,465           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 19:53:09,466           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [ZohJea0012vr22]
+[INFO ] 2017-06-01 19:54:06,021           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:54:06,328           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 19:54:06,329           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [YiIqWa0069vr19]
+[INFO ] 2017-06-01 19:58:46,684           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 19:58:47,009           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 19:58:47,011           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [0350vr21]
+[INFO ] 2017-06-01 20:01:00,432           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 20:01:00,731           com.yi.wechat.util.MenuUtil     - execute!
+[ERROR] 2017-06-01 20:01:00,733           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40016 errmsg:invalid button size hint: [yZ2PTa0484vr22]
+[INFO ] 2017-06-01 20:01:52,129           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 20:01:52,827           com.yi.wechat.util.MenuUtil     - execute!
+[INFO ] 2017-06-01 20:01:52,828           com.yi.wechat.util.MenuUtil     - execute2!
+[INFO ] 2017-06-01 20:01:52,828           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:02:35,948           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 20:02:36,633           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:05:26,441           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 20:05:27,031           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:12:37,906           com.yi.wechat.util.MenuUtil     - 获取access_token成功!
+[INFO ] 2017-06-01 20:12:38,963           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:13:05,050           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:20:24,781           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:25:27,945           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:46:13,870           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:48:38,857           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:49:25,201           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:50:25,018           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:52:55,229           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:53:54,844           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 20:55:50,305           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[INFO ] 2017-06-01 21:00:09,426           com.yi.wechat.util.MenuUtil     - 创建菜单成功！
+[ERROR] 2017-06-01 21:25:02,603           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:40027 errmsg:invalid sub button url size hint: [fGKWgA0525vr22]
+[ERROR] 2017-06-01 21:25:48,490           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:45009 errmsg:reach max api daily quota limit hint: [rAXUGa0571sz10!]
+[ERROR] 2017-06-01 21:42:48,277           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:45009 errmsg:reach max api daily quota limit hint: [ORNzia0591sz10!]
+[ERROR] 2017-06-01 21:50:06,145           com.yi.wechat.util.MenuUtil     - 创建菜单失败 errcode:45009 errmsg:reach max api daily quota limit hint: [l0029sz12!]

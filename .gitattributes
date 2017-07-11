@@ -17,4 +17,4 @@
 *.RTF	 diff=astextplain
 *.js linguist-language=Java
 *.css linguist-language=Java
-*.htnl linguist-language=Java
+*.html linguist-language=Java

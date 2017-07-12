@@ -16,6 +16,9 @@ import com.yi.wechat.pojo.Good;
 
 public class TestDeleteFolder {
 	public static void main(String[] args) throws IOException {
-		
+		String aString="";
+		System.out.println(aString.length());
+		String bString="    ";
+		System.out.println(bString.length());
 	}
 }

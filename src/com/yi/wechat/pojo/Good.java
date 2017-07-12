@@ -15,7 +15,14 @@ public class Good {
 		good_main_pic_path=goodMainPicPath;
 		good_desc_pics_path=goodDescPicsPath;
 	}
-	
+	public Good(int goodId,String goodName,String goodDescription,int goodPrice,String goodMainPicPath,String goodDescPicsPath){
+		good_id=goodId;
+		good_name=goodName;
+		good_description=goodDescription;
+		good_price=goodPrice;
+		good_main_pic_path=goodMainPicPath;
+		good_desc_pics_path=goodDescPicsPath;
+	}
 	public String getGood_desc_pics_path() {
 		return good_desc_pics_path;
 	}

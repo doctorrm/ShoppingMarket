@@ -73,11 +73,12 @@
 <!-- 被隐藏的添加界面 -->
 <div class="h-right-div" style="margin-left:50%">
 	<form method="post" action="AddGoodServlet" name="editForm" id="editForm"  onsubmit="return chkfrm()" enctype="multipart/form-data"><!-- 记得一定要加enctye以上传图片！！ -->
+		<input type="text" id="hidden_id_text" name="hidden_id_text"/><!-- 永远隐藏，用于update时往后台传good_id -->
 		商品名称：<input name="good_name" id="good_name" type="text" placeHolder="请输入商品名称">&nbsp;&nbsp;<span style="color:red">*</span><br><br>
 		商品描述：<textarea name="good_description" id="good_description" rows="5" cols="20" placeHolder="请输入商品简介"></textarea>&nbsp;&nbsp;<span style="color:red">*</span><br><br>
 		商品价格：<input name="good_price" id="good_price" type="text" placeHolder="请输入商品价格/元">&nbsp;&nbsp;<span style="color:red">*</span><br><br>
 		<br />
-		商品封面图片上传(只能上传一张封面)：		
+		商品封面图片上传(只能上传一张封面，名字随意)：		
 		<input type="file" name="good_main_pic"  id="good_main_pic"  accept=".jpg, .jpeg, .png" ><!-- 封面图片 -->
 						<br>
 		商品描述图片上传(支持多张图片,请对每张待上传的图片命名为不同的纯数字以保证顺序。)：

@@ -1,18 +1,21 @@
 //隐藏和显示
 $(document).ready(function(){	
 	$(".h-right-div").hide();//hiden first for following apperance.	
+	$("#hidden_id_text").hide();
     $(".btn-add").click(function(){
 		$(".right-div").hide();
-		$(".h-right-div").show();		
+		$(".h-right-div").show();	
+
 	}) 
 })
 
-function updateFun(name,description,price) {//在调用方法传入参数时要加引号，否则无法出发。
+function updateFun(id,name,description,price) {//在调用方法传入参数时要加引号，否则无法出发。
 	//原因可能是如果不加引号就会把传入的参数当作变量而不是字符串或什么具体类型的数据。而删除函数的参数在被调用传入参数时则不用加引号，因为传入的是id即数字，能认出来。
-		//alert("Update alert!");
+		//alert("Update alert!");alert(id);
 	document.getElementById("good_name").value=name;
 	document.getElementById("good_description").value=description;
 	document.getElementById("good_price").value=price;
+	document.getElementById("hidden_id_text").value=id;
 	$(".right-div").hide();
 	$(".h-right-div").show();
 }//end updateFun() function

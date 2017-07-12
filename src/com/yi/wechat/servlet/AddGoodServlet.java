@@ -26,6 +26,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FileUtils;
 
 import com.yi.wechat.dao.GoodOperationImpl;
 import com.yi.wechat.dao.IGoodOperation;
@@ -62,19 +63,44 @@ public class AddGoodServlet extends HttpServlet {
 		String dbPicFolderPaths="http://192.168.199.111:8080/images";
 		//调用重要的表单处理方法
 		Map<String, Object> dbEtyMap=handleFormSubmit(uploadFolderPaths,dbPicFolderPaths, request, response,"back-end-index.html");
-			//System.out.println(dbEtyMap);
+			//System.out.println("FINAL MAP:"+dbEtyMap);
 		String inputName=(String) dbEtyMap.get("good_name");
 		String inputDescription=(String) dbEtyMap.get("good_description");
 		String inputStrPrice=(String) dbEtyMap.get("good_price");
-		Integer inputIntPrice=Integer.valueOf(inputStrPrice);
+		int inputIntPrice=Integer.valueOf(inputStrPrice);
 		String goodMainPicPath=dbPicFolderPaths+"/"+inputName+"/main.jpg";
 		String goodDescPicsPath=(String) dbEtyMap.get("dbString");
-				//System.out.println(goodDescPicsPath);
-		
-		Good good=new Good(inputName,inputDescription,inputIntPrice,goodMainPicPath,goodDescPicsPath);//保存的数据库的图片名和下面的保存到磁盘的图片的名字相同。
-				//System.out.println(good);
-		igo=new GoodOperationImpl();//面向接口编程
-		igo.insertGood(good);//存入mysql。
+			//System.out.println(goodDescPicsPath);
+
+		if(dbEtyMap.get("hidden_id_text")!=null&&!((String)dbEtyMap.get("hidden_id_text")).equals("")){//Object判断是否为空用==null，字符串用.equals()
+			//if通过，说明有id数字字符串过来，是前端点击了update。注意update包括update数据库&&删除原来的图片文件夹。
+			//综合考虑前端，数据库和磁盘文件夹三大块，其实其它地方也要，只是这里比较典型。
+			String aString=(String) dbEtyMap.get("hidden_id_text");
+					//System.out.println(aString);
+			int idInteger=Integer.valueOf((String) dbEtyMap.get("hidden_id_text"));
+			igo=new GoodOperationImpl();//面向接口编程
+			Good good2=igo.getGoodById(idInteger);//先把update前端的good2对象获取到以方便后面删除文件夹
+			//System.out.println(idInteger);
+			Good good=new Good(idInteger,inputName,inputDescription,inputIntPrice,goodMainPicPath,goodDescPicsPath);//保存的数据库的图片名和下面的保存到磁盘的图片的名字相同。
+			//System.out.println(good);
+			igo.updateGood(good);//存入mysql。
+	//上面已经新创建了一个新的文件夹了，而update完成后原来的文件夹都还没删，要删掉：
+			//注意：这里的父文件夹要根据业务情况修改。
+			String fatherFolder="E://project_of_programming_software/images/";
+			//从数据库得到对应于id的原先的name，然后拼入路径字符串得到文件夹字符串			
+			String goodName=good2.getGood_name();
+			fatherFolder=fatherFolder+goodName;
+			//删除磁盘中对应的图片文件夹
+			FileUtils.deleteDirectory(new File(fatherFolder));
+			//至此更新完成！
+		}else{
+			//if不通过，说明没有id过来或者是id为空字符串，为添加商品
+			Good good=new Good(inputName,inputDescription,inputIntPrice,goodMainPicPath,goodDescPicsPath);//保存的数据库的图片名和下面的保存到磁盘的图片的名字相同。
+			//System.out.println(good);
+			igo=new GoodOperationImpl();//面向接口编程
+			igo.insertGood(good);//存入mysql。
+		}
+				
 		
 	}
 
@@ -183,7 +209,7 @@ public class AddGoodServlet extends HttpServlet {
 			int ind=picName.indexOf(".");
 			String subPicName=picName.substring(0, ind);//去掉后缀名
 			try{
-				Integer intName=Integer.valueOf(subPicName);
+				Integer intName=Integer.valueOf(subPicName);//前端需要验证数字要在Integer限制范围内
 				aSubPicNameList.add(intName);//保存数字形式的图片名到ArrayList
 			}catch(NumberFormatException e){
 				System.out.println("图片名字出现字符串，无法转化为数字。因此图片无法传入数据库");

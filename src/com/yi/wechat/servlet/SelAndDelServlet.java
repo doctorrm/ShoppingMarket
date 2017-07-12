@@ -1,6 +1,7 @@
 package com.yi.wechat.servlet;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -11,10 +12,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import com.yi.wechat.dao.GoodOperationImpl;
 import com.yi.wechat.dao.IGoodOperation;
+import com.yi.wechat.pojo.Good;
 
 import net.sf.json.JSONObject;
 
@@ -60,9 +64,19 @@ public class SelAndDelServlet extends HttpServlet {
 		}
 		String goodIdStr=buffStr.toString();
 		int goodIdInt=Integer.valueOf(goodIdStr);//把id转换为数字		
-			//System.out.println(goodIdInt);		
+			//System.out.println(goodIdInt);
+
+		//注意：这里的父文件夹要根据业务情况修改。
+		String fatherFolder="E://project_of_programming_software/images/";
 		igo=new GoodOperationImpl();
-		igo.deleteGood(goodIdInt);//删除对应id的商品！真的删了！	
+		//从数据库得到对应于id的name，然后拼入路径字符串得到文件夹字符串
+		Good good=igo.getGoodById(goodIdInt);
+		String goodName=good.getGood_name();
+		fatherFolder=fatherFolder+goodName;
+		//删除磁盘中对应的图片文件夹
+		FileUtils.deleteDirectory(new File(fatherFolder));
+		//删除数据库中商品纪录。
+		igo.deleteGood(goodIdInt);//删除对应id的商品！数据库中的纪录真的删了！	
 	}
 
 }

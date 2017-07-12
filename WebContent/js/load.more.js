@@ -13,7 +13,7 @@ $.ajax({
 			createdDiv.innerHTML="<td>"+data0.good[i].good_id+"</td><td>"+data0.good[i].good_name
 								+"</td><td>"+data0.good[i].good_description+"</td><td>"+data0.good[i].good_price
 								+"<span style='color:red;'><b>&yen;</b></span></td><td><img style='width:50px;height:50px;' src='"
-								+data0.good[i].good_main_pic_path+"'></td><td><a onclick=updateFun()>修改</a></td><td><a onclick=deleteFun("+data0.good[i].good_id+")>删除</a></td>";											
+								+data0.good[i].good_main_pic_path+"'></td><td><a onclick=updateFun('"+data0.good[i].good_name+"','"+data0.good[i].good_description+"','"+data0.good[i].good_price+"')>修改</a></td><td><a onclick=deleteFun("+data0.good[i].good_id+")>删除</a></td>";											
 																																																																			
 			document.getElementById("tb").appendChild(createdDiv);//创建tb的子节点，也可以用body，但是会在最底部，父节点必须是有字节点的					
 		}
@@ -28,7 +28,7 @@ $.ajax({
 						createdDiv.innerHTML="<td>"+result.good[i].good_id+"</td><td>"+result.good[i].good_name
 											+"</td><td>"+result.good[i].good_description+"</td><td>"+result.good[i].good_price
 											+"<span style='color:red;'><b>&yen;</b></span></td><td><img style='width:50px;height:50px;' src='"
-											+result.good[i].good_main_pic_path+"'></td><td><a onclick='updateFun()'>修改</a></td><td><a onclick='deleteFun("+data0.good[i].good_id+")'>删除</a></td>";
+											+result.good[i].good_main_pic_path+"'></td><td><a onclick='updateFun('"+result.good[i].good_name+"','"+result.good[i].good_description+"','"+result.good[i].good_price+"')'>修改</a></td><td><a onclick='deleteFun("+result.good[i].good_id+")'>删除</a></td>";
 						document.getElementById("tb").appendChild(createdDiv);//创建tb的子节点，也可以用body，但是会在最底部，父节点必须是有子节点的								
 					}
 			})	//end $().click function										

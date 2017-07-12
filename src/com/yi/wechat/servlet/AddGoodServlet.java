@@ -56,9 +56,6 @@ public class AddGoodServlet extends HttpServlet {
 	 * 保存商品信息到数据库;
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("utf-8");
-		response.setContentType("utf-8");
 		//保存到磁盘的实际路径（父目录，还没完整，在调用方法中完成）
 		String uploadFolderPaths="E://project_of_programming_software/images";//still need a username as folder,all the pics are stored in it,do it in another method.
 		//保存到数据库的虚拟路径（父目录，还没完整，在调用方法中完成）
@@ -93,6 +90,9 @@ public class AddGoodServlet extends HttpServlet {
 	 * @throws IOException
 	 */
 	public Map<String, Object> handleFormSubmit(String uploadFolderPath,String dbPicFolderPath,HttpServletRequest request,HttpServletResponse response,String jumpTo)throws ServletException, IOException{
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("utf-8");//注意：实际上为了中文设置编码应该在这里设置，因为获取和处理前端传来的数据是在这个方法中进行的，而不是在doPost(....)中进行！
 		//使用apache的fileupload jar包来处理上传的多张图片的处理。
 		//教程：http://www.codejava.net/java-ee/servlet/eclipse-file-upload-servlet-with-apache-common-file-upload
 		// checks if the request actually contains upload file
@@ -150,8 +150,8 @@ public class AddGoodServlet extends HttpServlet {
 			    }else if (item.isFormField()) {//处理输入的用户名等。
 			    	//注意：有一个很尴尬的地方，就是对于checkbox来说，因为一个名字name有几个对应的值（多选时），所以依次存放到map中会出现后面的checkbox覆盖了前面的checkbox
 					String fieldName=item.getFieldName();									
-					String fieldValue=item.getString();				
-						//System.out.println("name:"+fiedName+",value:"+fieldValue);
+					String fieldValue=item.getString("UTF-8");	
+						System.out.println("name:"+fieldName+",value:"+fieldValue);//检验是否有中文乱码
 						dbEntryMap.put(fieldName, fieldValue);
 						if(fieldName.equals("good_name")){//如果已经把或者刚刚把名字保存到map中就执行下面语句：(根据具体情况修改字符串)
 							folderName=(String) dbEntryMap.get("good_name");//把得到的value赋值到folderName中
@@ -186,7 +186,7 @@ public class AddGoodServlet extends HttpServlet {
 				Integer intName=Integer.valueOf(subPicName);
 				aSubPicNameList.add(intName);//保存数字形式的图片名到ArrayList
 			}catch(NumberFormatException e){
-				System.out.println("图片名字出现字符串，无法转化为数字");
+				System.out.println("图片名字出现字符串，无法转化为数字。因此图片无法传入数据库");
 			}
 			//System.out.println("图片名:"+picName+",去除后缀之后的图片名"+subPicName);		
 		}

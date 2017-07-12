@@ -7,8 +7,14 @@ $(document).ready(function(){
 	}) 
 })
 
-function updateFun() {
-	alert("Update alert!");
+function updateFun(name,description,price) {//在调用方法传入参数时要加引号，否则无法出发。
+	//原因可能是如果不加引号就会把传入的参数当作变量而不是字符串或什么具体类型的数据。而删除函数的参数在被调用传入参数时则不用加引号，因为传入的是id即数字，能认出来。
+		//alert("Update alert!");
+	document.getElementById("good_name").value=name;
+	document.getElementById("good_description").value=description;
+	document.getElementById("good_price").value=price;
+	$(".right-div").hide();
+	$(".h-right-div").show();
 }//end updateFun() function
 
 
@@ -31,12 +37,14 @@ function deleteFun(idInt) {
 	}, 50);
 }//end deleteFun() function
 
-/*function chkfrm() {//校检表单
+function chkfrm() {//校检表单
 	var nameStr=document.getElementById("good_name").value;
 	var descriptionStr=document.getElementById("good_description").value;
 	var priceStr=document.getElementById("good_price").value;
 	var priceInt=Number(priceStr,10);//要加第二个参数（转化为10进制），避免因为输入010（开头为0时默认为8进制）出错。
-	var picStr=document.getElementById("good_main_pic").value;
+	var picStr= document.getElementById("good_main_pic").value;	
+	var picsStr=document.getElementById("good_desc_pics").value;
+		
 	if (nameStr==""||nameStr==null) {//实际上提交的是空字符串，所以null其实可以不用考虑
 		alert("商品名称不能为空!");
 		return false;
@@ -56,9 +64,13 @@ function deleteFun(idInt) {
  	if(picStr==""){
  		alert("请上传商品的封面图片");
  		return false;
- 	}	
+ 	}
+ 	if(picsStr==""){
+ 		alert("请上传商品的至少一张详情图片");
+ 		return false;
+ 	}
 	return true;//默认可以提交
-}*/
+}
 
 
 

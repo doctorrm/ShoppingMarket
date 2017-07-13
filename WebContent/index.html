@@ -40,15 +40,18 @@ $.ajax({
 		//默认会先加载5个。然后下面一段启动代码就不会再执行了。
 			//alert(data);
 		var data0=data;
-		data0=JSON.parse(data0);		
-		for(var i=0;i<6;i++){			
-			var createdLi=document.createElement("li");														
-			createdLi.innerHTML="<br><div style='width:100%;float:left;padding-left:0'><a href='good_detail.html' style='float:left;width:30%;height:100px;background-color:white'>"+
+		data0=JSON.parse(data0);
+		var goodNum=data0.good.length;//得到了传过来的json中good数组的的商品数目
+			//alert(goodNum);
+		for(var i=0;i<goodNum;i++){//这里应该是直接加载所有的图片。。。bug			
+			var createdLi=document.createElement("li");
+			var href1="good_detail.html?good_id="+data0.good[i].good_id;
+			createdLi.innerHTML="<br><div style='width:100%;float:left;padding-left:0'><a href='"+href1+"' style='float:left;width:30%;height:100px;background-color:white'>"+
 			"<img style='width:100%;height:100px' src='"
-			+data0.good[i].good_main_pic_path+"'></a >"+"<a href='good_detail.html' style='float:left;width:70%;height:100px;background-color: white'>"+
+			+data0.good[i].good_main_pic_path+"'></a >"+"<a href='"+href1+"'style='float:left;width:70%;height:100px;background-color: white'>"+
 			data0.good[i].good_name+"<br><span style='color:red;'>"+data0.good[i].good_price+"<b>&yen;</b></span></a></div><br><br><br><br><br>"
 			 
-			 document.getElementById("good-list-ul").appendChild(createdLi);//创建tb的子节点，也可以用body，但是会在最底部，父节点必须是有字节点的
+			document.getElementById("good-list-ul").appendChild(createdLi);//创建tb的子节点，也可以用body，但是会在最底部，父节点必须是有字节点的
 		}
 	},
 	error:function(){

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>商品详情页面</title>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
 <script src="js/good_detail.js"></script>
-
 <link rel="stylesheet"  href="css/good_detail.css" />
 
 <style>
@@ -16,12 +16,22 @@
 .bottomDiv{position:fixed; left:0px; bottom:0px;height:40px;border-top:1px solid #CCC; text-align:center; background-color:white;  }
 </style>
 <script>
-	$(document).ready(function(){
+	function processLink()
+	{//获取从另一个html通过点击商品链接传递过来的商品id数据
+	  var parameters = location.search.substring(1).split("&");
+	  var temp = parameters[0].split("=");
+	 	 //alert(parameters);
+	  goodId = unescape(temp[1]);
+		 //alert(goodId); //得到商品id
+	}
+	processLink(); 
+
+
+	$(document).ready(function(){//处理底部悬浮
 	    var screenWidth = $(window).width();//获取屏幕可视区域的宽度。
 		$(".bottomDiv").width(screenWidth);//将宽度赋值给bottomDiv使其可以贯穿整个屏幕。
 		//var screenHeight = $(window).height();//获取屏幕可视区域的高度。
-		var divHeight = $(".bottomDiv").height() + 1;//bottomDiv的高度再加上它一像素的边框。
-		
+		var divHeight = $(".bottomDiv").height() + 1;//bottomDiv的高度再加上它一像素的边框。		
 		$(window).scroll(function(){
 			var scrollHeight = $(document).scrollTop();//获取滚动条滚动的高度。
 			if(!window.XMLHttpRequest){
@@ -29,6 +39,35 @@
 			}//判断是否为IE6，如果是，执行大括号中内容
 		})
 	})
+	
+	reqStr="{'getDetailGoodSignal':'"+goodId+"'}";//发送给后台的
+		//alert(reqStr);
+	$.ajax({//获取并显示详情图片
+		type:"post",
+		url:"SelAndDelServlet",
+		data:reqStr,
+		success:function(good){//与其它不同，这里点击详情页面后返回的是特定的商品			
+				//alert(good);
+			good=JSON.parse(good);
+				//alert(good); pop:Object object
+			var jsonStr=good.good_desc_pics_path;//后台是good.get("good_desc_pics_path";)
+				//alert(jsonStr);			
+			var	urls=jsonStr.split(",");//var urls=[];实际上生成的就是数组
+				//alert(urls.length);
+			for(var i=0;i<urls.length;i++){
+				var createdLi=document.createElement("li");														
+ 				createdLi.innerHTML="<img style='width:100%;height:250px' src='"+urls[i]+"'/>";
+				document.getElementById("detail-pics-ul").appendChild(createdLi);
+			 }	
+		},
+		error:function(){
+			alert("error");
+		}
+	})
+	
+</script>
+<script>
+	 
 </script>
 </head>
 
@@ -65,16 +104,14 @@
 	</div><!-- carousel -->
 
 <div style="background-color:orange;height:100px;">
-	没什么。。。。。
+	准备放入商品名称和描述、价格等。
 </div>
 
-<ul class="detail-pic-ul">
-	<li id="detail-pic-li">  </li>
+<!-- 详情图片 -->
+<ul id="detail-pics-ul">
+	<li>this is the first one</li>
 </ul>
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-测试测试！！！！！
+与底部有个间距。
 <br><br /><br /><br />
 <!--下面是永远悬浮在底部的购买和添加到购物车按钮组-->
   <div class="bottomDiv">

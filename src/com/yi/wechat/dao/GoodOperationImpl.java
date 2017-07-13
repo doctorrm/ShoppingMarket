@@ -41,7 +41,7 @@ public class GoodOperationImpl implements IGoodOperation {
 	    	//下面和hasNext()，next()时候所用的一模一样，区别的只在上面。
 		String singleJsonStr="{'good_id':'"+singleGood.getGood_id()+"','good_name':'"+singleGood.getGood_name()+
 				"','good_description':'"+singleGood.getGood_description()+"','good_price':'"+singleGood.getGood_price()+
-				"','good_main_pic_path':'"+singleGood.getGood_main_pic_path()+"','good_desc_pics_path:':'"+singleGood.getGood_desc_pics_path()+"'}";
+				"','good_main_pic_path':'"+singleGood.getGood_main_pic_path()+"','good_desc_pics_path':'"+singleGood.getGood_desc_pics_path()+"'}";
 		sb.append(singleJsonStr+",");	//注意此时的good_id对应的数字在json是字符串类型的
 		}		
 		String jsonStr=sb.toString();//现在的string最前有一个","，如何去掉？

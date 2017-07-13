@@ -54,7 +54,7 @@ public class AddGoodServlet extends HttpServlet {
 		doPost(request,response);
 	}
 	/**
-	 * 保存商品信息到数据库;
+	 * 保存商品信息到数据库&update商品;
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//保存到磁盘的实际路径（父目录，还没完整，在调用方法中完成）
@@ -64,7 +64,7 @@ public class AddGoodServlet extends HttpServlet {
 		//调用重要的表单处理方法
 		Map<String, Object> dbEtyMap=handleFormSubmit(uploadFolderPaths,dbPicFolderPaths, request, response,"back-end-index.html");
 			//System.out.println("FINAL MAP:"+dbEtyMap);
-		String inputName=(String) dbEtyMap.get("good_name");
+		String inputName=(String) dbEtyMap.get("good_name");//从前端传来的商品名称(即文件夹名称)，要和修改之前的文件夹名称做对比，下面要用到。
 		String inputDescription=(String) dbEtyMap.get("good_description");
 		String inputStrPrice=(String) dbEtyMap.get("good_price");
 		int inputIntPrice=Integer.valueOf(inputStrPrice);
@@ -77,21 +77,25 @@ public class AddGoodServlet extends HttpServlet {
 			//综合考虑前端，数据库和磁盘文件夹三大块，其实其它地方也要，只是这里比较典型。
 			String aString=(String) dbEtyMap.get("hidden_id_text");
 					//System.out.println(aString);
-			int idInteger=Integer.valueOf((String) dbEtyMap.get("hidden_id_text"));
+			int idInteger=Integer.valueOf(aString);
 			igo=new GoodOperationImpl();//面向接口编程
-			Good good2=igo.getGoodById(idInteger);//先把update前端的good2对象获取到以方便后面删除文件夹
+			Good good2=igo.getGoodById(idInteger);//先把update前的good2对象获取到以方便后面删除文件夹
+			String goodName=good2.getGood_name();//这是修改前的文件夹名称。
 			//System.out.println(idInteger);
 			Good good=new Good(idInteger,inputName,inputDescription,inputIntPrice,goodMainPicPath,goodDescPicsPath);//保存的数据库的图片名和下面的保存到磁盘的图片的名字相同。
 			//System.out.println(good);
 			igo.updateGood(good);//存入mysql。
-	//上面已经新创建了一个新的文件夹了，而update完成后原来的文件夹都还没删，要删掉：
-			//注意：这里的父文件夹要根据业务情况修改。
-			String fatherFolder="E://project_of_programming_software/images/";
-			//从数据库得到对应于id的原先的name，然后拼入路径字符串得到文件夹字符串			
-			String goodName=good2.getGood_name();
-			fatherFolder=fatherFolder+goodName;
-			//删除磁盘中对应的图片文件夹
-			FileUtils.deleteDirectory(new File(fatherFolder));
+	//上面已经新创建了一个新的文件夹了，现在要做判断：如果同名则会覆盖，不理它；如果不同名，则update完成后原来的文件夹都还没删，要删掉：
+			if(!inputName.equals(goodName)){
+				//注意：这里的父文件夹要根据业务情况修改。
+				String fatherFolder="E://project_of_programming_software/images/";
+				//从数据库得到对应于id的原先的name，然后拼入路径字符串得到文件夹字符串			
+				fatherFolder=fatherFolder+goodName;
+				//删除磁盘中对应的图片文件夹
+				FileUtils.deleteDirectory(new File(fatherFolder));
+			}else{
+				//说明修改前后的文件夹名称相同，已经实现了新文件夹覆盖旧的文件夹，所以没有必要删除旧文件夹了。
+			}
 			//至此更新完成！
 		}else{
 			//if不通过，说明没有id过来或者是id为空字符串，为添加商品

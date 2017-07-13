@@ -11,7 +11,8 @@ $(document).ready(function(){
 
 function updateFun(id,name,description,price) {//在调用方法传入参数时要加引号，否则无法出发。
 	//原因可能是如果不加引号就会把传入的参数当作变量而不是字符串或什么具体类型的数据。而删除函数的参数在被调用传入参数时则不用加引号，因为传入的是id即数字，能认出来。
-		//alert("Update alert!");alert(id);
+		//alert("Update alert!");
+		//alert(id);
 	document.getElementById("good_name").value=name;
 	document.getElementById("good_description").value=description;
 	document.getElementById("good_price").value=price;
@@ -23,10 +24,11 @@ function updateFun(id,name,description,price) {//在调用方法传入参数时�
 
 function deleteFun(idInt) {
 	var idStr=idInt.toString();//这里传入的idInt是数字，要转换为字符串
+	jsonStr="{'deleteSignal':'"+idStr+"'}";
 	$.ajax({
 		type:"post",
 		url:"SelAndDelServlet",
-		data:idStr,
+		data:jsonStr,
 		success:function(){				
 			//alert("success");
 		},

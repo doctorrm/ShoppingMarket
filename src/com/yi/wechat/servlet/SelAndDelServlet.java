@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -48,35 +49,54 @@ public class SelAndDelServlet extends HttpServlet {
 				//System.out.println(jsonStr);
 		//String jsonStr=JDBCStuff.getStringa();//,采用了jdbc来获取数据表数据。这里必须是json格式的字符串,并且字符串都是有引号的。																
 		JSONObject jo=JSONObject.fromObject(jsonStr);
-		PrintWriter out=response.getWriter();
-		out.println(jo);//就算是ln和加了\n，最后发送到前端的都是json类型的，所以都是紧凑的字符串					
+		PrintWriter pw=response.getWriter();
+		pw.println(jo);//就算是ln和加了\n，最后发送到前端的都是json类型的，所以都是紧凑的字符串					
 	}
 
 	/**delete good by id in real!
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 				//System.out.println("I come from the doPost() method!");
+		request.setCharacterEncoding("UTF-8");			
+		response.setContentType("UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		StringBuffer buffStr=new StringBuffer();
 		BufferedReader reader=request.getReader();
 		String str=null;
 		while((str=reader.readLine())!=null){
 			buffStr.append(str);
 		}
-		String goodIdStr=buffStr.toString();
-		int goodIdInt=Integer.valueOf(goodIdStr);//把id转换为数字		
-			//System.out.println(goodIdInt);
-
-		//注意：这里的父文件夹要根据业务情况修改。
-		String fatherFolder="E://project_of_programming_software/images/";
+		String goodIdStr=buffStr.toString();//包含goodId和signal
+			//System.out.println(goodIdStr);
+		JSONObject jsonObject=JSONObject.fromObject(goodIdStr);
+		Set<?> set=jsonObject.keySet();
+		Object[] keys=set.toArray();
+		String key0=(String) keys[0];
+		String value0=(String)jsonObject.get(key0);//前端是jsonObject.key0
+			//System.out.println("key0:"+key0+",value0:"+value0);
+		int goodIdInt=Integer.valueOf(value0);//把id转换为数字		
 		igo=new GoodOperationImpl();
-		//从数据库得到对应于id的name，然后拼入路径字符串得到文件夹字符串
 		Good good=igo.getGoodById(goodIdInt);
-		String goodName=good.getGood_name();
-		fatherFolder=fatherFolder+goodName;
-		//删除磁盘中对应的图片文件夹
-		FileUtils.deleteDirectory(new File(fatherFolder));
-		//删除数据库中商品纪录。
-		igo.deleteGood(goodIdInt);//删除对应id的商品！数据库中的纪录真的删了！	
+		
+		if(key0.equals("deleteSignal")){//如果是删除信号
+			//注意：这里的父文件夹要根据业务情况修改。
+			String fatherFolder="E://project_of_programming_software/images/";
+			//从数据库得到对应于id的name，然后拼入路径字符串得到文件夹字符串
+			String goodName=good.getGood_name();
+			fatherFolder=fatherFolder+goodName;
+			//删除磁盘中对应的图片文件夹
+			FileUtils.deleteDirectory(new File(fatherFolder));
+			//删除数据库中商品纪录。
+			igo.deleteGood(goodIdInt);//删除对应id的商品！数据库中的纪录真的删了！	
+		
+		}else if (key0.equals("getDetailGoodSignal")) {//如果是要获取具体某件商品的详情图片路径信号
+			String jsonGood=good.toString();
+				//System.out.println(jsonGood);
+			JSONObject jsonObject2=JSONObject.fromObject(jsonGood);
+			PrintWriter pw=response.getWriter();
+			pw.println(jsonObject2);
+	
+			
+		}
 	}
-
 }

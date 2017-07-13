@@ -16,9 +16,11 @@ import com.yi.wechat.pojo.Good;
 
 public class TestDeleteFolder {
 	public static void main(String[] args) throws IOException {
-		String aString="";
-		System.out.println(aString.length());
-		String bString="    ";
-		System.out.println(bString.length());
+	String aString="http://192.168.199.111:8080/images/修改名称/1.jpg,http://192.168.199.111:8080/images/修改名称/2.jpg,http://192.168.199.111:8080/images/修改名称/3.jpg";
+	String[] urls=aString.split(",");
+	for(String w:urls){
+		System.out.println(w);
+	}
+	
 	}
 }

@@ -60,9 +60,9 @@ public class Good {
 		this.good_main_pic_path = good_main_pic_path;
 	}
 	@Override
-	public String toString() {
-		return "Good [good_id=" + good_id + ", good_name=" + good_name + ", good_description=" + good_description
-				+ ", good_price=" + good_price + ", good_main_pic_path=" + good_main_pic_path + "]";
+	public String toString() {//以json格式返回对象
+		return "{'good_id':'" + good_id + "', ’good_name':'" + good_name + "', 'good_description':'" + good_description
+				+ "',' good_price':" + good_price + "',' good_main_pic_path':'" + good_main_pic_path + "','good_desc_pics_path':'"+good_desc_pics_path+"'}";
 	}
 	
 	

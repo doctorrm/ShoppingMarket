@@ -37,4 +37,4 @@ $.ajax({
 	error:function(){
 		//do nothing
 	}			
-}) //end ajax. with of without ','
+}) //end ajax. with or without ','

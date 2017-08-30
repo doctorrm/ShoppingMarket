@@ -2,11 +2,18 @@
 $(document).ready(function(){	
 	$(".h-right-div").hide();//hiden first for following apperance.	
 	$("#hidden_id_text").hide();
+	$(".h-news-div").hide();
     $(".btn-add").click(function(){
 		$(".right-div").hide();
 		$(".h-right-div").show();	
-
 	}) 
+	$(".news").click(function(){
+		$(".right-div").hide();
+		$(".h-right-div").hide();
+		$(".h-news-div").show();
+		document.getElementById("a1").className="#";	
+		document.getElementById("a4").className="active";
+	})
 })
 
 function updateFun(id,name,description,price) {//在调用方法传入参数时要加引号，否则无法出发。

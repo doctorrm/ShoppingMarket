@@ -60,7 +60,7 @@ public class AddGoodServlet extends HttpServlet {
 		//保存到磁盘的实际路径（父目录，还没完整，在调用方法中完成）
 		String uploadFolderPaths="E://project_of_programming_software/images";//still need a username as folder,all the pics are stored in it,do it in another method.
 		//保存到数据库的虚拟路径（父目录，还没完整，在调用方法中完成）
-		String dbPicFolderPaths="http://192.168.199.111:8080/images";
+		String dbPicFolderPaths="http://192.168.1.108:8080/images";
 		//调用重要的表单处理方法
 		Map<String, Object> dbEtyMap=handleFormSubmit(uploadFolderPaths,dbPicFolderPaths, request, response,"back-end-index.html");
 			//System.out.println("FINAL MAP:"+dbEtyMap);

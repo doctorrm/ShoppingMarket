@@ -35,7 +35,7 @@
 
 <!-- 侧边导航栏 -->
 <ul class="side-bar-ul"><!-- chrome更喜欢uull? -->
-	<li><a class="active" href="back-end-index.html">商品管理</a></li>
+	<li><a id="a1" class="active" href="back-end-index.html">商品管理</a></li>
 	<li><a href="#">订单管理</a></li>
 	<li><a href="#">用户管理</a></li>
 	<li>
@@ -45,7 +45,9 @@
 		</ul>
 	
 	</li>
-	<li><a href="#">管理员中心</a></li>		
+	<li class="news"><a id="a4" class="#" href="#" >首页新闻发布</a></li>
+	<li><a href="#">管理员中心</a></li>	
+	
 </ul><!-- side nav bar -->
 		
 <!-- 右侧表格 -->	       							
@@ -87,6 +89,26 @@
 		<input onclick=refreshFun()  style="width:100px;text-align:center" type="submit" value="确认"/>
 	</form>
 </div><!-- hidden add good form -->
+<!-- 被隐藏的新闻发布模块 -->
+<div class="h-news-div" style="margin-left:50%">
+	<form action="" method="post" name="news" id="news">
+		新闻一:
+		<br /><input type="text" placeHolder="url地址"/><br />
+		<input type="file" name="news_pic_1"  id="news_pic_1"  accept=".jpg, .jpeg, .png" >
+		<br />
+		
+		新闻二:
+		<br /><input type="text" placeHolder="url地址"/><br />
+		<input type="file" name="news_pic_2"  id="news_pic_2"  accept=".jpg, .jpeg, .png" >  
+		<br />
+		
+		新闻三:
+		<br /><input type="text" placeHolder="url地址"/><br />
+		<input type="file" name="news_pic_3"  id="news_pic_3"  accept=".jpg, .jpeg, .png" >
+		<br />
+		<input type="submit" value="确认" />		
+	</form>
+</div><!-- hidden news div -->
 
 <!-- 页脚 -->
 <div class="footer" style="width:100%">易开发<b>·</b>版权所有<br>
